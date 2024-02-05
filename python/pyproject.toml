@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mt_code"
+version = "0.1.0"
+description = "Machine translation project for german to english and english to german"
+authors = ["Rashid Nizamani"]
+
+[tool.poetry.dependencies]
+python = "~3.9.6"
+typer = "^0.3.2"
+pydantic = "^1.10.1"
+typing-extensions = "4.5.0"
+tensorflow-io-gcs-filesystem = "0.27.0"
+tensorflow = "2.10.0"
+numpy = ">=1.20.3"
+pandas = ">1.4.0"
+datasets = ">2.14.0"
+transformers = "^4.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
