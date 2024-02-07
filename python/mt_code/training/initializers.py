@@ -9,7 +9,7 @@ def initialize_tokenizer(config: Config):
     return auto_config, tokenizer
 
 
-def initialize_optimizer(config, train_batches_per_epoch):
+def initialize_optimizer(config: Config, train_batches_per_epoch: int):
 
     optimizer, _ = create_optimizer(
         init_lr=config.training.lr,

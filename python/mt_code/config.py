@@ -10,8 +10,7 @@ logger = logging.getLogger(__name__)
 class TrainingConfig(BaseModel):
     epochs: int = 5
     lr: float = 5e-5
-    train_batch_size_per_device: int = 16
-    validation_batch_size_per_device: int = 16
+    batch_size_per_device: int = 16
     warmup_steps: int = 0
     adam_beta1: float = 0.9
     adam_beta2: float = 0.999
@@ -43,7 +42,7 @@ class ModelConfig(BaseModel):
 
 
 class DataConfig(BaseModel):
-    dataset_name: str = ""
+    dataset_name: str = "wmt17"
     max_token_length: Optional[int] = 256
     pad_to_max_length: bool = False
 
