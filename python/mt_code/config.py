@@ -37,7 +37,7 @@ class TrainingConfig(BaseModel):
 
 class ModelConfig(BaseModel):
     model_name: str = "google-t5/t5-large"
-    tokenizer_name: Optional[str] = "t5-base"
+    tokenizer_name: Optional[str] = "google-t5/t5-large"
     fast_tokenizer: bool = True
 
 
