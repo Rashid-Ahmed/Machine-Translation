@@ -30,4 +30,5 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python3.9 get-pip.py && \
     rm get-pip.py
 
-RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=/usr/local/python-poetry python3.9 -
+RUN python3.9 -m pip install --upgrade pip && \
+    python3.9 -m pip install poetry
