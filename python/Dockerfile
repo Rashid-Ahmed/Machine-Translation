@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libreadline-dev \
     libsqlite3-dev \
     libbz2-dev \
+    liblzma-dev \
     wget \
     llvm \
     && apt-get clean \
