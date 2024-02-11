@@ -13,7 +13,6 @@ def train(output_path: Path, config: Config):
     train_batches_per_epoch = len(train_dataset) // config.training.batch_size_per_device
     validation_batches_per_epoch = len(validation_dataset) // config.training.batch_size_per_device
     auto_config, tokenizer = initialize_tokenizer(config)
-
     with config.training.tf_strategy.scope():
 
         optimizer = initialize_optimizer(config, train_batches_per_epoch)
@@ -29,5 +28,6 @@ def train(output_path: Path, config: Config):
         )
 
     tokenizer.save_pretrained(os.path.join(output_path, "tokenizer"))
+    tokenizer.save_vocabulary(os.path.join(output_path, "tokenizer"))
     model.save_pretrained(output_path)
     model.save(output_path)
