@@ -26,4 +26,8 @@ RUN curl -O https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz \
 
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.9 1
 
-RUN curl -sSL https://install.python-poetry.org | python3.9 -
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    python3.9 get-pip.py && \
+    rm get-pip.py
+
+RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=/usr/local/python-poetry python3.9 -
