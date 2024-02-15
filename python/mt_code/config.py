@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 class TrainingConfig(BaseModel):
     epochs: int = 5
     lr: float = 5e-5
-    batch_size_per_device: int = 8
+    batch_size_per_device: int = 4
     warmup_steps: int = 0
     adam_beta1: float = 0.9
     adam_beta2: float = 0.999
