@@ -9,7 +9,7 @@ To change the dataset and model among other things, go to python/ner/config.py
 Steps to follow
 1. Clone the project
 2. Go to the python folder and do poetry lock -> poetry install
-3. Run cli.py train <output directory>
+3. Run cli.py train output_directory
 
 Alternatively you can build a docker container from the provided dockerfile and run the code on the container.
 
