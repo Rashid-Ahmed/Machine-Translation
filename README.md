@@ -1,6 +1,6 @@
 # Machine-Translation
 
-This is a Github repository to train Named Entity Recognition models. 
+This is a Github repository to train Machine Translation models. 
 
 ## Usage
 
